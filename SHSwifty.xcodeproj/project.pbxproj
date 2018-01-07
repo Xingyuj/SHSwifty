@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		8A3DF14620024E6400B3662D /* SHSwifty.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A3DF14420024E6400B3662D /* SHSwifty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A3DF14D20024FF100B3662D /* Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3DF14C20024FF100B3662D /* Demo.swift */; };
+		8A3DF1752002509700B3662D /* Demo.swift in Headers */ = {isa = PBXBuildFile; fileRef = 8A3DF14C20024FF100B3662D /* Demo.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8A3DF14120024E6400B3662D /* SHSwifty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SHSwifty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A3DF14420024E6400B3662D /* SHSwifty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHSwifty.h; sourceTree = "<group>"; };
 		8A3DF14520024E6400B3662D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A3DF14C20024FF100B3662D /* Demo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +50,7 @@
 			isa = PBXGroup;
 			children = (
 				8A3DF14420024E6400B3662D /* SHSwifty.h */,
+				8A3DF14C20024FF100B3662D /* Demo.swift */,
 				8A3DF14520024E6400B3662D /* Info.plist */,
 			);
 			path = SHSwifty;
@@ -60,6 +64,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A3DF14620024E6400B3662D /* SHSwifty.h in Headers */,
+				8A3DF1752002509700B3662D /* Demo.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +100,7 @@
 				TargetAttributes = {
 					8A3DF14020024E6400B3662D = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -131,6 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A3DF14D20024FF100B3662D /* Demo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +260,7 @@
 		8A3DF14A20024E6400B3662D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -266,6 +274,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = fish.SHSwifty;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -274,6 +283,7 @@
 		8A3DF14B20024E6400B3662D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
