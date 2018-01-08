@@ -8,9 +8,9 @@
 
 import Foundation
 
-@objc public class SHApiProcessor:NSObject {
+public class SHApiProcessor:NSObject {
     
-    @objc public static func printHello(){
+    public static func printHello(){
         print("hello fastlane and cocoapods")
     }
     

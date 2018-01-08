@@ -13,10 +13,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		66A2E414629B9052ECA6B3FD /* Pods_SHSwifty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SHSwifty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A3DF14120024E6400B3662D /* SHSwifty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SHSwifty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A3DF14420024E6400B3662D /* SHSwifty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHSwifty.h; sourceTree = "<group>"; };
 		8A3DF14520024E6400B3662D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A3DF14C20024FF100B3662D /* Demo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo.swift; sourceTree = "<group>"; };
+		A13CFB1A8CA4C95962D2D573 /* Pods-SHSwifty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHSwifty.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SHSwifty/Pods-SHSwifty.debug.xcconfig"; sourceTree = "<group>"; };
+		B9DD48FA518FB7121F84CCBE /* Pods-SHSwifty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SHSwifty.release.xcconfig"; path = "Pods/Target Support Files/Pods-SHSwifty/Pods-SHSwifty.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,11 +33,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7085746E14339A2A137D4414 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A13CFB1A8CA4C95962D2D573 /* Pods-SHSwifty.debug.xcconfig */,
+				B9DD48FA518FB7121F84CCBE /* Pods-SHSwifty.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8A3DF13720024E6400B3662D = {
 			isa = PBXGroup;
 			children = (
 				8A3DF14320024E6400B3662D /* SHSwifty */,
 				8A3DF14220024E6400B3662D /* Products */,
+				7085746E14339A2A137D4414 /* Pods */,
+				A7469BF7274A67DF63E7C839 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +70,14 @@
 			path = SHSwifty;
 			sourceTree = "<group>";
 		};
+		A7469BF7274A67DF63E7C839 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66A2E414629B9052ECA6B3FD /* Pods_SHSwifty.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -75,10 +97,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A3DF14920024E6400B3662D /* Build configuration list for PBXNativeTarget "SHSwifty" */;
 			buildPhases = (
+				5C7FEC50E341599AB234AB92 /* [CP] Check Pods Manifest.lock */,
 				8A3DF13C20024E6400B3662D /* Sources */,
 				8A3DF13D20024E6400B3662D /* Frameworks */,
 				8A3DF13E20024E6400B3662D /* Headers */,
 				8A3DF13F20024E6400B3662D /* Resources */,
+				5E2FD147D3C578AE19C3CE60 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +155,42 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5C7FEC50E341599AB234AB92 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SHSwifty-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E2FD147D3C578AE19C3CE60 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SHSwifty/Pods-SHSwifty-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8A3DF13C20024E6400B3662D /* Sources */ = {
@@ -194,7 +254,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -249,7 +309,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -261,6 +321,7 @@
 		};
 		8A3DF14A20024E6400B3662D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A13CFB1A8CA4C95962D2D573 /* Pods-SHSwifty.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: endorathas@gmail.com (679PSUCS9A)";
@@ -275,18 +336,19 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = fish.SHSwifty;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		8A3DF14B20024E6400B3662D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9DD48FA518FB7121F84CCBE /* Pods-SHSwifty.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: endorathas@gmail.com (679PSUCS9A)";
@@ -300,11 +362,11 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = fish.SHSwifty;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
